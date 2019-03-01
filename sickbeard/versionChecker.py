@@ -784,7 +784,7 @@ class SourceUpdateManager(UpdateManager):
         Downloads the latest source tarball from github and installs it over the existing version.
         """
 
-        tar_download_url = 'http://github.com/' + sickbeard.GIT_ORG + '/' + sickbeard.GIT_REPO + '/tarball/' + self.branch
+        tar_download_url = 'http://github.com/BeegorMif/' + sickbeard.GIT_REPO + '/tarball/' + self.branch
 
         try:
             # prepare the update dir
