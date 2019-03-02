@@ -722,7 +722,7 @@ class SourceUpdateManager(UpdateManager):
         self._num_commits_behind = 0
         self._newest_commit_hash = None
 
-        repo = sickbeard.gh.get_organization(sickbeard.GIT_ORG).get_repo(sickbeard.GIT_REPO)
+        repo = sickbeard.gh.get_user("BeegorMif").get_repo(sickbeard.GIT_REPO)
         # try to get newest commit hash and commits behind directly by comparing branch and current commit
         if self._cur_commit_hash:
             try:
@@ -858,5 +858,5 @@ class SourceUpdateManager(UpdateManager):
         if not sickbeard.gh:
             return []
 
-        repo = sickbeard.gh.get_organization(sickbeard.GIT_ORG).get_repo(sickbeard.GIT_REPO)
+        repo = sickbeard.gh.get_user("BeegorMif").get_repo(sickbeard.GIT_REPO)
         return [x.name for x in repo.get_branches() if x]
